@@ -4,7 +4,7 @@ class DataFilesController < ApplicationController
   end
 
   def show
-    @data_files = DataFile.find(params[:id])
+    @data_file = DataFile.find(params[:id])
   end
 
   def new
@@ -26,6 +26,6 @@ class DataFilesController < ApplicationController
 
   protected
   def data_file_params
-    params.require(:data_file).permit(:name, :user_id)
+    params.require(:data_file).permit(:name, :category, :description, :user_id)
   end
 end
