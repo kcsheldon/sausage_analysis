@@ -11,6 +11,7 @@
     <td><%= @data_file.name %></td>
     <td><%= @data_file.category %></td>
     <td><%= @data_file.description %></td>
+    <td><%= image_tag(@data_file.profile_photo) %></td>
     <td><%= @data_file.created_at.localtime %></td>
   </tr>
 </table>

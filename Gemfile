@@ -31,6 +31,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 gem "simple_form"
 gem "carrierwave"
+#gem "paperclip", "~> 4.3"
 gem "fog"
 gem "dotenv-rails"
 gem "kaminari"
@@ -47,5 +48,5 @@ group :development, :test do
   gem "pry-rails"
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  #gem 'spring'
 end
