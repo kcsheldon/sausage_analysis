@@ -1,7 +1,7 @@
 <h2>Data File List</h2>
 <ul>
   <% @data_files.each do |data_file| %>
-  <li><%= link_to data_file.name, data_file_path(data_file)%> <%= data_file.name %></li>
+  <li><%= link_to data_file.name, data_file_path(data_file)%> <%= data_file.category %></li>
   <%end%>
 </ul>
 <%= link_to '<button type="button">Add a new data file</button>'.html_safe, new_data_file_path %>

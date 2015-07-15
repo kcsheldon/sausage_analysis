@@ -5,7 +5,7 @@ class CreateDataFiles < ActiveRecord::Migration
       t.string :category
       t.text :description
       t.string :user_id
-      t.string :profile_photo
+      t.string :csv_file
 
       t.timestamps null: false
     end

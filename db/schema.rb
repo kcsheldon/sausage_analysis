@@ -17,13 +17,13 @@ ActiveRecord::Schema.define(version: 20150714120402) do
   enable_extension "plpgsql"
 
   create_table "data_files", force: :cascade do |t|
-    t.string   "name",          null: false
+    t.string   "name",        null: false
     t.string   "category"
     t.text     "description"
     t.string   "user_id"
-    t.string   "profile_photo"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "csv_file"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

@@ -5,13 +5,14 @@
     <th>Name</th>
     <th>Category</th>
     <th>Description</th>
+    <th>CSV File</th>
     <th>Created</th>
   </tr>
   <tr>
     <td><%= @data_file.name %></td>
     <td><%= @data_file.category %></td>
     <td><%= @data_file.description %></td>
-    <td><%= image_tag(@data_file.profile_photo) %></td>
+    <td><%= @data_file.csv_file %></td>
     <td><%= @data_file.created_at.localtime %></td>
   </tr>
 </table>
