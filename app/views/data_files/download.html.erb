@@ -1,0 +1,23 @@
+<h2>Data File DB Load</h2>
+<
+<ul>
+  <li><%= @data_file.name %></li>
+  <li><%= @data_file.category %></li>
+  <li><%= @data_file.description %></li>
+  <li><%= @data_file.csv_file %></li>
+  <li><%= @data_file.created_at.localtime %></li>
+</ul>
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Force</th>
+  </tr>
+    <% @file.each do |entry| %>
+    <tr>
+      <% entry.each do |data|%>
+          <td><%= data %></td>
+      <% end %>
+    </tr>
+    <% end %>
+
+</table>

@@ -16,3 +16,5 @@
     <td><%= @data_file.created_at.localtime %></td>
   </tr>
 </table>
+
+<%= link_to '<button type="button">Add data file to database</button>'.html_safe, download_data_file_path %>

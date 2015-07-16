@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
-  #get 'welcome/index'
-  resources :data_files
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
   # You can have the root of your site routed with "root"
    root 'welcome#index'
+   
+  # Example resource route with options:
+  resources :data_files do
+    member do
+      get 'download'
+    end
+  end
+
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
