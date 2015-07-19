@@ -34,6 +34,8 @@ gem "carrierwave"
 gem "fog"
 gem "dotenv-rails"
 gem "kaminari"
+gem "c3-rails"
+gem "d3-rails"
 
 
 group :development, :test do
