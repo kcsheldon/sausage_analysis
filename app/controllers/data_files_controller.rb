@@ -28,6 +28,8 @@ class DataFilesController < ApplicationController
     @data_file = DataFile.find(params[:id])
     url = @data_file.csv_file.url
     @file = CSV.parse(open(url))
+    gon.data =@file
+    binding.pry
   end
 
   protected
