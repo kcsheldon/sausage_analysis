@@ -29,6 +29,7 @@ class DataFilesController < ApplicationController
     @url = @data_file.csv_file.url
     @file = CSV.parse(open(@url))
     gon.data = @file.to_json
+    check_url = @data_file.csv_file.url
   end
 
   protected
