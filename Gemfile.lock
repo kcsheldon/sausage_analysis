@@ -175,6 +175,11 @@ GEM
     formatador (0.2.5)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    gon (5.2.3)
+      actionpack (>= 2.3.0)
+      json
+      multi_json
+      request_store (>= 1.0.5)
     i18n (0.7.0)
     inflecto (0.0.2)
     ipaddress (0.8.0)
@@ -238,6 +243,7 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
+    rails_layout (1.0.26)
     rails_serve_static_assets (0.0.4)
     rails_stdout_logging (0.0.3)
     railties (4.2.2)
@@ -248,6 +254,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    request_store (1.2.0)
     rspec-core (3.3.1)
       rspec-support (~> 3.3.0)
     rspec-expectations (3.3.0)
@@ -300,6 +307,8 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
     xpath (2.0.0)
       nokogiri (~> 1.3)
+    zurb-foundation (4.3.2)
+      sass (>= 3.2.0)
 
 PLATFORMS
   ruby
@@ -313,6 +322,7 @@ DEPENDENCIES
   d3-rails
   dotenv-rails
   fog
+  gon
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
@@ -322,12 +332,14 @@ DEPENDENCIES
   puma
   rails (= 4.2.2)
   rails_12factor
+  rails_layout
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+  zurb-foundation
 
 BUNDLED WITH
    1.10.5

@@ -7,6 +7,30 @@
   <li><%= @data_file.csv_file %></li>
   <li><%= @data_file.created_at.localtime %></li>
 </ul>
+<h1>Chart</h1>
+<div id="chart"></div>
+
+  <h1>Counting rabbits</h1>
+  <script>
+      alert("Hello world")
+      alert(gon.data);
+      var chart = c3.generate({
+       data: {
+         url: '/public/c3_test.csv'
+       }
+     });
+    </script>
+  <h1>...Finished counting</h1>
+
+  <div id="chart"></div>
+
+<% javascript_tag do %>
+  window.dataURL = "<%=j @url %>";
+  window.data = <%=raw DataFile.limit(10)%>;
+  var data = JSON.parse(@url);
+
+  <% end %>
+
 <table>
   <tr>
     <th>Time</th>
@@ -19,5 +43,4 @@
       <% end %>
     </tr>
     <% end %>
-
 </table>

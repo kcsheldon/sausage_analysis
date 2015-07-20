@@ -26,8 +26,9 @@ class DataFilesController < ApplicationController
   def download
     #load the selected CSV file from S3 into the database
     @data_file = DataFile.find(params[:id])
-    url = @data_file.csv_file.url
-    @file = CSV.parse(open(url))
+    @url = @data_file.csv_file.url
+    @file = CSV.parse(open(@url))
+    gon.data = @file.to_json
   end
 
   protected

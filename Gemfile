@@ -36,6 +36,9 @@ gem "dotenv-rails"
 gem "kaminari"
 gem "c3-rails"
 gem "d3-rails"
+gem "gon"
+gem "zurb-foundation"
+
 
 
 group :development, :test do
@@ -48,6 +51,7 @@ group :development, :test do
   gem "capybara"
   gem "launchy"
   gem "pry-rails"
+  gem 'rails_layout'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   #gem 'spring'
