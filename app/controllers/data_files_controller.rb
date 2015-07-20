@@ -27,9 +27,17 @@ class DataFilesController < ApplicationController
     #load the selected CSV file from S3 into the database
     @data_file = DataFile.find(params[:id])
     @url = @data_file.csv_file.url
+    #binding.pry
     @file = CSV.parse(open(@url))
-    gon.data = @file.to_json
+    # gon.data = @file.to_json
     check_url = @data_file.csv_file.url
+
+    respond_to do |format|
+      format.html
+      format.json {
+        render :json => @file.to_json
+      }
+    end
   end
 
   protected
