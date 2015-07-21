@@ -1,4 +1,4 @@
-<h2>Data File DB Load</h2>
+<h2>Chart</h2>
 <ul>
   <li><%= @data_file.name %></li>
   <li><%= @data_file.category %></li>
@@ -6,13 +6,41 @@
   <li><%= @data_file.csv_file %></li>
   <li><%= @data_file.created_at.localtime %></li>
 </ul>
-<div id="chart"></div>
+<div id="chart1"></div>
+<script>
+var chart = c3.generate({
+  bindto: '#chart1',
+  size: { height: 400, width: 1200 },
+    data: {
+        x: 'x',
+        columns: [
+            gon.x_time,
+            gon.data1,
+            gon.data2,
+            gon.data3,
+            gon.data4,
+            gon.data5,
+            gon.data6,
+            gon.data7,
+            gon.data8
+        ]
+    },
+    axis: {
+        x: {
+            label: 'Time in seconds'
+        },
+        y: {
+            label: 'Force in grams'
+        }
+    }
+});
+</script>
 <table>
   <tr>
     <th>Time</th>
     <th>Force</th>
   </tr>
-    <% @file.each do |entry| %>
+    <% @file.first(10) do |entry| %>
     <tr>
       <% entry.each do |data|%>
           <td><%= data %></td>
@@ -21,3 +49,8 @@
     <% end %>
 
 </table>
+
+<!-- Code from Lorry -->
+<%= javascript_tag do %>
+  var x_axis = <%= @file[0].to_json.html_safe %>
+<% end %>
