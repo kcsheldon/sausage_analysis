@@ -1,20 +1,22 @@
-<div class="small-2">
-<h2>New Data Set</h2>
-<%= form_for @data_file do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<div class="row">
+  <div class="columns">
+    <h2>New Data Set</h2>
+    <%= form_for @data_file do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
 
-  <%= f.label :category %>
-  <%= f.text_field :category %>
+      <%= f.label :category %>
+      <%= f.text_field :category %>
 
-  <%= f.label :description %>
-  <%= f.text_area :description %>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
 
-  <div class="field button">
-    <%= f.label :csv_file %>
-    <%= f.file_field :csv_file %>
+      <div class="field button">
+        <%= f.label :csv_file %>
+        <%= f.file_field :csv_file %>
+      </div>
+
+      <%= f.submit "Add Data File", class: :button %>
+    <% end %>
   </div>
-
-  <%= f.submit "Add Data File", class: :button %>
-  <% end %>
 </div>

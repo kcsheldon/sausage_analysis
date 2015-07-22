@@ -1,20 +1,23 @@
-<h2>Data File</h2>
+<div class="row">
+  <div class="columns">
+    <h2>Data File</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>CSV File</th>
+        <th>Created</th>
+      </tr>
+      <tr>
+        <td><%= @data_file.name %></td>
+        <td><%= @data_file.category %></td>
+        <td><%= @data_file.description %></td>
+        <td><%= @data_file.csv_file %></td>
+        <td><%= @data_file.created_at.localtime %></td>
+      </tr>
+    </table>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Category</th>
-    <th>Description</th>
-    <th>CSV File</th>
-    <th>Created</th>
-  </tr>
-  <tr>
-    <td><%= @data_file.name %></td>
-    <td><%= @data_file.category %></td>
-    <td><%= @data_file.description %></td>
-    <td><%= @data_file.csv_file %></td>
-    <td><%= @data_file.created_at.localtime %></td>
-  </tr>
-</table>
-
-<%= link_to '<button type="button">Show data file charts</button>'.html_safe, download_data_file_path %>
+    <%= link_to '<button type="button">Show data file charts</button>'.html_safe, download_data_file_path %>
+  </div>
+</div>

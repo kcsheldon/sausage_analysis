@@ -40,7 +40,6 @@ class DataFilesController < ApplicationController
     @data6 = []
     @data7 = []
     @data8 = []
-    @data9 = []
 
     @file.each do |array|
       @x_time << array[0]
@@ -54,6 +53,14 @@ class DataFilesController < ApplicationController
       @data8 << array[8]
     end
 
+    # hash = {}
+    #
+    # @file.each_with_index do |row, index|
+    #   hash[index] = @file.map { |row| row[index]}
+    # end
+    #
+
+
     # gon.data = @file.to_json
     # check_url = @data_file.csv_file.url
 
@@ -64,6 +71,7 @@ class DataFilesController < ApplicationController
     #     render :json => @file.to_json
     #   }
     # end
+    # gon.data = hash.values
     gon.x_time = @x_time
     gon.data1 = @data1
     gon.data2 = @data2
@@ -73,7 +81,6 @@ class DataFilesController < ApplicationController
     gon.data6 = @data6
     gon.data7 = @data7
     gon.data8 = @data8
-
   end
 
   protected

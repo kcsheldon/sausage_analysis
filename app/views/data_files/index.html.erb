@@ -1,7 +1,11 @@
-<h2>Data File List</h2>
-<ul>
-  <% @data_files.each do |data_file| %>
-  <li><%= link_to data_file.name, data_file_path(data_file)%> <%= data_file.category %></li>
-  <%end%>
-</ul>
-<%= link_to '<button type="button">Add a new data set to storage</button>'.html_safe, new_data_file_path %>
+<div class="row">
+  <div class="columns">
+    <h2>Data File List</h2>
+    <ul>
+      <% @data_files.each do |data_file| %>
+      <div><%= link_to data_file.name, data_file_path(data_file)%> <%= data_file.category %></div>
+      <%end%>
+    </ul>
+    <%= link_to '<button type="button">Add a new data set to storage</button>'.html_safe, new_data_file_path %>
+  </div>
+</div>
