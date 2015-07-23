@@ -1,13 +1,26 @@
 <div class="row">
   <div class="columns large-12">
-    <h2>Chart</h2>
-    <ul>
-      <div><%= @data_file.name %></div>
-      <div><%= @data_file.category %></div>
-      <div><%= @data_file.description %></div>
-      <div><%= @data_file.csv_file %></div>
-      <div><%= @data_file.created_at.localtime %></div>
-    </ul>
+  <table>
+    <thead>
+      <tr>
+        <th>Line Chart Information</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div><%= @data_file.name %></div></td>
+      </tr>
+      <tr>
+        <td><div><%= @data_file.category %></div></td>
+      </tr>
+      <tr>
+        <td><div><%= @data_file.csv_file %></div></td>
+      </tr>
+      <tr>
+        <td><div><%= @data_file.created_at.localtime %></div></td>
+      </tr>
+    </tbody>
+</table>
     <div id="chart1"></div>
     <script>
     var chart = c3.generate({
@@ -37,6 +50,7 @@
         }
     });
     </script>
+    <h4>First Ten Rows of data</h4>
     <table>
       <tr>
         <th>Time</th>

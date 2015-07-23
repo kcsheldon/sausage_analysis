@@ -1,6 +1,6 @@
 <div class="row">
   <div class="columns">
-    <h2>Data File List</h2>
+    <h3>Data File List</h3>
     <ul>
       <% @data_files.each do |data_file| %>
       <div><%= link_to data_file.name, data_file_path(data_file)%> <%= data_file.category %></div>

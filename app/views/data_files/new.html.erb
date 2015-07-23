@@ -1,6 +1,6 @@
 <div class="row">
-  <div class="columns">
-    <h2>New Data Set</h2>
+  <div class="columns large-12">
+    <h3>New Data Set</h3>
     <%= form_for @data_file do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name %>
@@ -15,8 +15,9 @@
         <%= f.label :csv_file %>
         <%= f.file_field :csv_file %>
       </div>
-
+      <div>
       <%= f.submit "Add Data File", class: :button %>
+    </div>
     <% end %>
   </div>
 </div>
