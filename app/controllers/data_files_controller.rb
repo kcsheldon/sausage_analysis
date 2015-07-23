@@ -1,6 +1,6 @@
 class DataFilesController < ApplicationController
   def index
-    @data_files = DataFile.all
+    @data_files = DataFile.all.order(:name)
   end
 
   def show

@@ -3,15 +3,13 @@
     <h2>Sausage Production Data Analysis</h2>
 
       <p> Average peak force penetration data for sausage production.</p>
-      <p> Allows the charting of average peak force penetration collected from sausage production. Data is collected
+      <p> This application allows charting of average peak force penetration collected from sausage production. Data is collected
         every 5 ms from probes inserted into the sausages. Force is measured in grams. The averages are collected and stored
         in excell files. The files are converted to CSV data and uploaded to cloud storage. This application keeps
         track of the uploaded files. Each data set for a particular type of sausage consists of eight sets of sample
         data. This can be charted as a time series for each of the eight samples for comparision. Negtive peak average penetration
         force values have been removed from the datasets since these values represent measurements from the probes
         as they are being retracted from the sample sausage. </p>
-
-    <h3>Click on this link to go to the data file upload page.</h3>
-    <%= link_to '<button type="button">Data File List</button>'.html_safe, data_files_path %>
+    <%= link_to '<button type="button">Data File Index</button>'.html_safe, data_files_path %>
     </div>
 </div>
