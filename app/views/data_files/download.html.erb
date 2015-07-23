@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="columns">
+  <div class="columns large-12">
     <h2>Chart</h2>
     <ul>
       <div><%= @data_file.name %></div>
@@ -12,7 +12,7 @@
     <script>
     var chart = c3.generate({
       bindto: '#chart1',
-      size: { height: 400, width: 1200 },
+      size: { height: 400},
         data: {
             x: 'x',
             columns: [
