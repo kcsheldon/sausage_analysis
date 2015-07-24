@@ -1,11 +1,14 @@
 <div class="row">
   <div class="columns">
     <h3>Data File List</h3>
-    <ul>
+    <table>
       <% @data_files.each do |data_file| %>
-      <div><%= link_to data_file.name, data_file_path(data_file)%> <%= data_file.category %></div>
+      <tr>
+        <td><div><%= link_to data_file.name, data_file_path(data_file)%></td>
+        <td> <%= data_file.category %></td></div>
+      </tr>
       <%end%>
-    </ul>
+    </table>
     <%= link_to '<button type="button">Add a new data set</button>'.html_safe, new_data_file_path %>
   </div>
 </div>
