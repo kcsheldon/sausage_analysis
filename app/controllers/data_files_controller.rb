@@ -31,6 +31,8 @@ class DataFilesController < ApplicationController
 
     @file[0][0] = 'x'
 
+    gon.categories = @file[0].drop(1)
+
     @x_time = []
     @data1 = []
     @data2 = []
@@ -52,6 +54,26 @@ class DataFilesController < ApplicationController
       @data7 << array[7]
       @data8 << array[8]
     end
+
+    @max_array = ['Maximum']
+    @max_array << csv_max(@data1)
+    @max_array << csv_max(@data2)
+    @max_array << csv_max(@data3)
+    @max_array << csv_max(@data4)
+    @max_array << csv_max(@data5)
+    @max_array << csv_max(@data6)
+    @max_array << csv_max(@data7)
+    @max_array << csv_max(@data8)
+
+    @min_array = ['Minimum']
+    @min_array << csv_min(@data1)
+    @min_array << csv_min(@data2)
+    @min_array << csv_min(@data3)
+    @min_array << csv_min(@data4)
+    @min_array << csv_min(@data5)
+    @min_array << csv_min(@data6)
+    @min_array << csv_min(@data7)
+    @min_array << csv_min(@data8)
 
     # hash = {}
     #
@@ -81,6 +103,24 @@ class DataFilesController < ApplicationController
     gon.data6 = @data6
     gon.data7 = @data7
     gon.data8 = @data8
+    gon.max_array = @max_array
+    gon.min_array = @min_array
+  end
+
+  def csv_max (str_array)
+    max = 0
+    str_array.each do |string|
+      max = string.to_f if string.to_f > max
+    end
+    max
+  end
+
+  def csv_min (str_array)
+    min = 1000
+    str_array.each do |string|
+      min = string.to_f if (string.to_f < min && string.to_f > 0)
+    end
+    min
   end
 
   protected

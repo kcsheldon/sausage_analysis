@@ -21,7 +21,7 @@
       </tr>
     </tbody>
 </table>
-    <div id="chart1"></div>
+     <div id="chart1"></div>
     <script>
     var chart = c3.generate({
       bindto: '#chart1',
@@ -50,7 +50,37 @@
         }
     });
     </script>
-    <h4>First Ten Rows of data</h4>
+    <h6>Maximum Average Peak Penetration Force</h6>
+    <div id="chart2"></div>
+    <script>
+    var colors = ['#1f77b4', '#ff7f0e','#2ca02c', '#d62728','#A864CD', '#7A5229', '#FF99CC',  '#808080'];
+    var chart = c3.generate({
+      bindto: '#chart2',
+    data: {
+        columns: [
+            gon.max_array
+        ],
+        type: 'bar',
+        color: function (color, d) {
+            return colors[d.index];
+        }
+        },
+        axis: {
+            x: {
+                type: 'category',
+                categories: gon.categories
+            }
+        },
+        bar: {
+            width: {
+                ratio: 0.5 // this makes bar width 50% of length between ticks
+            }
+            // or
+            //width: 100 // this makes bar width 100px
+        }
+});
+</script>
+    <h6>First Ten Rows of data</h6>
     <table>
       <tr>
         <th>Time</th>
