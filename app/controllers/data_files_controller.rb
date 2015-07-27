@@ -22,6 +22,17 @@ class DataFilesController < ApplicationController
       render :new
     end
   end
+  def destroy
+    @data_file = DataFile.find_by(id: params[:id])
+
+    if @data_file.destroy
+      flash[:notice] = "Data File Deleted"
+      redirect_to data_files_path
+    else
+      flash[:alert] = @data_file.errors.full_messages
+      render :index
+    end
+  end
 
   def download
     #load the selected CSV file from S3 into the database

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'welcome#index'
-   
+
   # Example resource route with options:
   resources :data_files do
     member do
