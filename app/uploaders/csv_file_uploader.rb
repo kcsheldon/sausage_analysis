@@ -9,7 +9,7 @@ class CsvFileUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
   # :file
   # storage :fog
-  if Rails.env.production? || Rails.env.development?
+  if Rails.env.production? || Rails.env.development? || Rails.env.test?
     storage :fog
   else
     storage :file

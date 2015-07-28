@@ -333,7 +333,7 @@ DEPENDENCIES
   rails (= 4.2.2)
   rails_12factor
   rails_layout
-  rspec-rails (~> 3.0)
+  rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form
