@@ -86,25 +86,6 @@ class DataFilesController < ApplicationController
     @min_array << csv_min(@data7)
     @min_array << csv_min(@data8)
 
-    # hash = {}
-    #
-    # @file.each_with_index do |row, index|
-    #   hash[index] = @file.map { |row| row[index]}
-    # end
-    #
-
-
-    # gon.data = @file.to_json
-    # check_url = @data_file.csv_file.url
-
-    # Code from Christina
-    # respond_to do |format|
-    #   format.html
-    #   format.json {
-    #     render :json => @file.to_json
-    #   }
-    # end
-    # gon.data = hash.values
     gon.x_time = @x_time
     gon.data1 = @data1
     gon.data2 = @data2
